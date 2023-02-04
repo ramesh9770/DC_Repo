@@ -1,0 +1,25 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: DC-API
+  datasource:
+    username: root
+    password: test@123
+    url: jdbc:mysql://localhost:3306/rihisdb
+    driver-class-name: com.mysql.cj.jdbc.Driver
+ 
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+  jpa:
+    hibernate:
+      ddl-auto: update 
+        
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
